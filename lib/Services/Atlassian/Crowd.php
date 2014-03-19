@@ -136,7 +136,7 @@ class Services_Atlassian_Crowd
      */
     public function authenticateApplication()
     {
-        $credential = array('credential' => $this->crowd_config['app_credential']);
+        $credential = array('credential' => $this->crowd_config['app_credential'], 'encryptedCredential' => false);
         $name       = $this->crowd_config['app_name'];
         $param      = array('in0' => array('credential' => $credential,
                                            'name'       => $name));
